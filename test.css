@@ -9,7 +9,7 @@
 body
 {
 	min-height: 100vh;
-	background: skyblue;
+	background: linear-gradient(to bottom,#96CDCD,#5F9F9F);
 }
 .flex-center
 {
@@ -81,9 +81,6 @@ body
 	padding: 20px;
 
 }
-.box2 progress
-{
-}
 .box2 h2
 {
 	height: 20%;
@@ -135,6 +132,11 @@ body
 	font-weight: 999;
 	color: solid white;
 }
+.college img
+{
+	height: 25px;
+	width: 25px;
+}
 .course
 {
 	font-size: 20px;
@@ -179,19 +181,13 @@ body
 }
 .project-size a:hover
 {
-	text-shadow: 0px 0px 10px skyblue;
-	color: white;
+	text-shadow: 0px 0px 2px white;
 }
-#todoapp
+.link
 {
 	padding: 4px;
 	color: skyblue;
-	text-transform: capitalize;
-}
-#todoapp:hover
-{
-	color: white;
-	text-shadow: 0 0 4px white;
+	text-transform: capitalize;	
 }
 
 .row3
@@ -205,14 +201,10 @@ body
 	flex: 1 1 500px;
 	height: 150px;
 	flex-wrap: wrap;
-	padding: 20px;
+	padding: 20px 40px;
 	background-color: rgba(30,30,30,1);
 	border: 1px solid skyblue;
 	color: skyblue;
-}
-.box5,.box6 h1
-{
-	
 }
 
 .box6
@@ -260,8 +252,8 @@ body
 {
 	.container-size
 	{
-		width: 100vw;
-		height: 100vh;
+		width: 99vw;
+		height: 99vh;
 		margin: 0px;
 	}
 }
