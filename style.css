@@ -136,7 +136,7 @@ nav a::first-letter
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 10vw;
+    padding: 50px 10vw 0px 10vw;
     min-height: 100vh;
 }
 .photo
@@ -151,8 +151,8 @@ nav a::first-letter
 }
 .photo img
 {
-    height: 200px;
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;  
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -177,7 +177,7 @@ nav a::first-letter
     justify-content: center;
     flex: 1 1 100%;
     width: 100%;
-    font-size: 4.5em;
+    font-size: 4em;
     color: var(--ofont);
     text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     position: relative;
@@ -386,22 +386,22 @@ nav a::first-letter
 .box4
 {
     width: 100%;
-    padding: 90px 15vw 0px 15vw;
+    padding: 70px 15vw 0px 15vw;
 }
 .box4 h1
 {
     color: var(--ofont);
     font-size: 3em;
     position: relative;
-    min-height: 80px;
     flex: 1 1 100%;
+    overflow: hidden;
 }
-.box4 h1:nth-child(1):after
+.box4 h1:after
 {
     content: '';
     display: flex;
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     left: 0vw;
     width: 10ch;
     height: 5px;
@@ -409,15 +409,14 @@ nav a::first-letter
     border-radius: 999;
     animation: 1s underline41 forwards;
 }
-.box4 > h1:last-child:after
+.box4 h1:first-child:after
 {
     content: '';
     display: flex;
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     left: 0vw;
     width: 10ch;
-    height: 5px;
     background-color: var(--fontcolor);
     border-radius: 999;
     animation: 1s underline42 forwards;
@@ -439,7 +438,7 @@ nav a::first-letter
     }
     100%
     {
-        width: 28ch;
+        width: 29ch;
     }
 }
 .ecard
@@ -471,7 +470,7 @@ nav a::first-letter
 .skillbox
 {
     width: 100%;
-    height: 2em;
+    height: 1.5em;
     margin: 10px 0px;
     border-radius: 10px;
     display: flex;
@@ -479,23 +478,23 @@ nav a::first-letter
     padding-left: 20px;
     color: var(--bgcolor);
     font-weight: 666;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .java
 {
-    background: linear-gradient(90deg,var(--fontcolor) 85%,rgba(255,255,255,0.5) 15%);
+    background: linear-gradient(90deg,var(--fontcolor) 85%,rgba(255,255,255,0.2) 15%);
 }
 .javascript
 {
-    background: linear-gradient(90deg,var(--fontcolor) 70%,rgba(255,255,255,0.5) 30%);
+    background: linear-gradient(90deg,var(--fontcolor) 70%,rgba(255,255,255,0.2) 30%);
 }
 .python
 {
-    background: linear-gradient(90deg,var(--fontcolor) 85%,rgba(255,255,255,0.5) 15%);
+    background: linear-gradient(90deg,var(--fontcolor) 85%,rgba(255,255,255,0.2) 15%);
 }
 .cpp
 {
-    background: linear-gradient(90deg,var(--fontcolor) 65%,rgba(255,255,255,0.5) 35%);
+    background: linear-gradient(90deg,var(--fontcolor) 65%,rgba(255,255,255,0.2) 35%);
 }
 
 .otherskills
@@ -569,6 +568,14 @@ nav a::first-letter
 {
     text-decoration: none;
     font-size: 1.2em;
+    color: skyblue;
+}
+.box5 i{
+    font-size: 2em;
+    padding: 10px 10px 0px 0px;
+    color: var(--fontcolor);
+}
+.box5 i:hover{
     color: skyblue;
 }
 
