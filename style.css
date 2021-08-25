@@ -528,16 +528,17 @@ nav a::first-letter
 {
     flex: 1 1 85%;
     display: flex;
-    align-items: center;
-    padding: 20px 0vw 20px 15vw;
+    padding: 70px 15vw 0px 15vw;
     flex-wrap: wrap;
+    height: 100vh;
 }
 .box5 h1
 {
     color: var(--ofont);
     font-size: 3em;
     position: relative;
-    min-height: 80px;
+    height: 80px;
+    flex: 1 1 100%;
 }
 .box5 h1::after
 {
@@ -569,6 +570,7 @@ nav a::first-letter
 .box5 > span
 {
     font-size: 1em;
+    padding: 150px
 }
 .box5 a
 {
@@ -578,10 +580,12 @@ nav a::first-letter
 }
 .box5 i{
     font-size: 2em;
-    padding: 10px 10px 0px 0px;
+    padding: 20px 20px 0px 0px;
     color: var(--fontcolor);
+    
 }
-.box5 i:hover{
+.box5 i:hover,
+.box5 i:focus{
     color: skyblue;
 }
 
