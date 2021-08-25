@@ -129,9 +129,10 @@ nav a::first-letter
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 100vh;
+    height: 500vh;
     width: 100%;
     scroll-behavior: smooth;
+    
 }
 
 /*/////////////box1///////////*/
@@ -530,7 +531,7 @@ nav a::first-letter
     display: flex;
     padding: 70px 15vw 0px 15vw;
     flex-wrap: wrap;
-    height: 100vh;
+    
 }
 .box5 h1
 {
@@ -566,21 +567,24 @@ nav a::first-letter
 .box5 > div
 {
     flex: 1 1 100%;
+
 }
-.box5 > span
+.box5 span
 {
-    font-size: 1em;
-    padding: 150px
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0px 20px 10px 00px;
 }
 .box5 a
 {
     text-decoration: none;
     font-size: 1.2em;
     color: skyblue;
+
 }
 .box5 i{
     font-size: 2em;
-    padding: 20px 20px 0px 0px;
+    padding: 25px 25px 0px 0px;
     color: var(--fontcolor);
     
 }
@@ -609,4 +613,5 @@ nav a::first-letter
 .box1, .box2, .box3, .box4, .box5
 {
     box-sizing: border-box;
+    min-height: 100vh;
 }
