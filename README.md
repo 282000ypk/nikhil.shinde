@@ -1,3 +1,1 @@
-# Yogesh Kamble
-
-My Portfolio
+# Yogesh Kamble - My Portfolio
