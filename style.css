@@ -10,6 +10,11 @@
     --fontcolor: #e0eaf5;
     --ofont: #fcbb42;
 }
+html
+{
+    scroll-behavior: smooth;
+}
+
 .flex-center
 {
     display: flex;
@@ -124,8 +129,10 @@ nav a::first-letter
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 100vh;
+    height: 500vh;
     width: 100%;
+    scroll-behavior: smooth;
+    
 }
 
 /*/////////////box1///////////*/
@@ -522,16 +529,17 @@ nav a::first-letter
 {
     flex: 1 1 85%;
     display: flex;
-    align-items: center;
-    padding: 20px 0vw 20px 15vw;
+    padding: 70px 15vw 0px 15vw;
     flex-wrap: wrap;
+    
 }
 .box5 h1
 {
     color: var(--ofont);
     font-size: 3em;
     position: relative;
-    min-height: 80px;
+    height: 80px;
+    flex: 1 1 100%;
 }
 .box5 h1::after
 {
@@ -559,23 +567,29 @@ nav a::first-letter
 .box5 > div
 {
     flex: 1 1 100%;
+
 }
-.box5 > span
+.box5 span
 {
-    font-size: 1em;
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0px 20px 10px 00px;
 }
 .box5 a
 {
     text-decoration: none;
     font-size: 1.2em;
     color: skyblue;
+
 }
 .box5 i{
     font-size: 2em;
-    padding: 10px 10px 0px 0px;
+    padding: 25px 25px 0px 0px;
     color: var(--fontcolor);
+    
 }
-.box5 i:hover{
+.box5 i:hover,
+.box5 i:focus{
     color: skyblue;
 }
 
@@ -599,4 +613,5 @@ nav a::first-letter
 .box1, .box2, .box3, .box4, .box5
 {
     box-sizing: border-box;
+    min-height: 100vh;
 }
