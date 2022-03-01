@@ -2,6 +2,7 @@
 {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 :root
 {
@@ -27,6 +28,21 @@ body
     background-color: var(--bgcolor);
     color: var(--fontcolor)
 }
+
+/*/////main container ///////*/
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    padding: 0px 10vw;
+}
+
+/*//////nav bar //////*/
 nav
 {
     position: fixed;
@@ -39,6 +55,7 @@ nav
     text-align: right;
     z-index: 999;
 }
+
 .expanded
 {
     display: block;
@@ -123,30 +140,26 @@ nav a::first-letter
        display: none;
     }
 }
-.container
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 500vh;
-    width: 100%;
-    scroll-behavior: smooth;
-    
-}
 
+/* all box common styling */
+.box1, .box2, .box3, .box4, .box5
+{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
 /*/////////////box1///////////*/
 .box1
 {
-    flex: 1 1 90%;
-    display: flex;
+    align-content: center;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 50px 10vw 0px 10vw;
-    min-height: 100vh;
 }
-.photo
+
+.box1 > .photo
 {
     flex: 0 1 250px;
     text-align: center;
@@ -165,7 +178,6 @@ nav a::first-letter
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .intro
 {
     flex: 1 1 300px;
@@ -173,7 +185,7 @@ nav a::first-letter
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -226,23 +238,40 @@ nav a::first-letter
 }
 .box2
 {
-    width: 100vw;
+    align-items: flex-start;
 }
 .box2 h1
 {
-    padding: 70px 15vw 10px 15vw;
     color: var(--ofont);
     font-size: 3em;
     position: relative;
-    height: 80px;
+}
+.box2 h3
+{
+    position: relative;
+    border-left: 2px solid var(--ofont);
+    padding: 10px;
+}
+.box2 h3::after
+{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -3.5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--ofont);
+    display: flex;
+    box-shadow: 0 0 5px 1px var(--ofont);
+    
 }
 .box2 h1::after
 {
     content: '';
     display: flex;
     position: absolute;
-    bottom: 25px;
-    left: 15vw;
+    bottom: 0px;
     width: 10ch;
     height: 5px;
     background-color: var(--fontcolor);
@@ -269,12 +298,16 @@ nav a::first-letter
     padding: 20px;
     position: relative;
 }
+.duration span
+{
+    color: var(--ofont);
+}
 .duration::before
 {
     content: '';
     position: absolute;
     top: -5px;
-    left: -5px;
+    left: -6.5px;
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -285,15 +318,13 @@ nav a::first-letter
 .duration h2
 {
     padding: 10px 0px;
-    color: var(--ofont);
+    font-size: 2em;
 }
 .lti
 {
     flex: 1 1 100%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    padding: 20px 15vw;
 }
 .lti img{
     flex: 0 1 200px;
@@ -301,7 +332,7 @@ nav a::first-letter
     height: 200px;
     border-radius: 20px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin-right: 20px;
 }
 /*//////////////////////box3//////////////////*/
 
@@ -311,7 +342,6 @@ nav a::first-letter
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 70px 15vw 0px 15vw;
 }
 .box3 h1
 {
@@ -393,7 +423,7 @@ nav a::first-letter
 .box4
 {
     width: 100%;
-    padding: 70px 15vw 0px 15vw;
+    gap: 20px;
 }
 .box4 h1
 {
@@ -450,14 +480,14 @@ nav a::first-letter
 }
 .ecard
 {
-    width: calc(100%-10px);
+    flex: 1 1 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0px;
     border-radius: 20px;
-    box-shadow: 0 0 5px 0.5px var(--navcolor);
+    box-shadow: 0 0 5px 1px var(--navcolor);
     padding: 10px;
 }
 .ecard h2{
@@ -474,19 +504,29 @@ nav a::first-letter
     flex: 1 1 100%;
     padding: 10px;
 }
+.primary_skills
+{
+    flex: 1 1 100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
 .skillbox
 {
-    width: 100%;
+    flex: 0 1 200px;
     height: 1.5em;
-    margin: 10px 0px;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 20px;
+    padding: 50px;
     color: var(--bgcolor);
     font-weight: 666;
     font-size: 1.2em;
+    background: var(--fontcolor)
 }
+/*
 .java
 {
     background: linear-gradient(90deg,var(--fontcolor) 85%,rgba(255,255,255,0.2) 15%);
@@ -503,7 +543,7 @@ nav a::first-letter
 {
     background: linear-gradient(90deg,var(--fontcolor) 65%,rgba(255,255,255,0.2) 35%);
 }
-
+*/
 .otherskills
 {
     padding: 10px 0px;
@@ -518,7 +558,7 @@ nav a::first-letter
 {
     background-color: var(--fontcolor);
     color: var(--bgcolor);
-    padding: 5px 10px;
+    padding: 5px 30px;
     border-radius: 999px;
     margin: 3px;
     display: inline-block;
@@ -529,9 +569,7 @@ nav a::first-letter
 {
     flex: 1 1 85%;
     display: flex;
-    padding: 70px 15vw 0px 15vw;
     flex-wrap: wrap;
-    
 }
 .box5 h1
 {
@@ -567,7 +605,6 @@ nav a::first-letter
 .box5 > div
 {
     flex: 1 1 100%;
-
 }
 .box5 span
 {
@@ -580,13 +617,11 @@ nav a::first-letter
     text-decoration: none;
     font-size: 1.2em;
     color: skyblue;
-
 }
 .box5 i{
     font-size: 2em;
-    padding: 25px 25px 0px 0px;
     color: var(--fontcolor);
-    
+    padding: 20px 20px 20px 0px;
 }
 .box5 i:hover,
 .box5 i:focus{
@@ -610,8 +645,10 @@ nav a::first-letter
     }
 }
 
-.box1, .box2, .box3, .box4, .box5
+
+@media(max-width: 600px)
 {
-    box-sizing: border-box;
-    min-height: 100vh;
+    .container{
+        padding: 20px;
+    }
 }
