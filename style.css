@@ -234,7 +234,7 @@ nav a::first-letter
     flex: 1 1 100%;
     text-align: center;
     font-size: 1.2em;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .box2
 {
